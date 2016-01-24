@@ -1,4 +1,22 @@
-commit d83c25b1622d63c8e7a99b5372960192c45c17b5 (HEAD, origin/master, origin/HEAD, master)
+commit f1086748947cce5e04fc944fa85bf832908b0a07 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Jan 23 20:05:17 2016 -0430
+
+    * se activa travis
+
+commit 91b824ac6a82a882e127c7a0259609471817ffa4
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Jan 23 20:04:25 2016 -0430
+
+    * archivo de travis
+
+commit 5655b144aa9f2c3521da8807899dc2de9c3573db
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Jan 23 20:01:11 2016 -0430
+
+    * changelog
+
+commit d83c25b1622d63c8e7a99b5372960192c45c17b5
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Jan 23 20:00:59 2016 -0430
 
