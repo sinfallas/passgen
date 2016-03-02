@@ -1,4 +1,16 @@
-commit eedf13bb16b817933d55d86850669501efa5fe05 (HEAD, origin/master, origin/HEAD, master)
+commit 437d9b2e2f1ddef8be912bb9add3e47fe1fbfbb4 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Mar 2 18:45:49 2016 -0430
+
+    * se cambia el mensaje y el color del mismo
+
+commit 83b46c1c90ee6069abf673b8d0633b51601395a7
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Mar 2 18:43:01 2016 -0430
+
+    * changelog
+
+commit eedf13bb16b817933d55d86850669501efa5fe05
 Author: jose perez <sinfallas@gmail.com>
 Date:   Wed Mar 2 18:41:38 2016 -0430
 
