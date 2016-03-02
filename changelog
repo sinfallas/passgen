@@ -1,4 +1,17 @@
-commit 63f91826aa0fb0a298bdd2d21b4d9a9689fa7314 (HEAD, origin/master, origin/HEAD, master)
+commit eedf13bb16b817933d55d86850669501efa5fe05 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Mar 2 18:41:38 2016 -0430
+
+    * se crea una version simplificada del script para xanadu
+    * la version anterior fue renombrada como passgen-all
+
+commit fb113c38e88dbac8d8ede4af89c08df6e5a08ae7
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Feb 29 21:26:31 2016 -0430
+
+    * changelog
+
+commit 63f91826aa0fb0a298bdd2d21b4d9a9689fa7314
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Feb 29 21:26:03 2016 -0430
 
