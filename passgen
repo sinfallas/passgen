@@ -2,35 +2,12 @@
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
 LC_ALL=C
-case "$1" in
-	1)
-		date +%s | sha256sum | base64 | head -c "$2";echo
-		;;
 
-	2)
-		< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c "$2";echo;	
-		;;
+if [[ -z $1 ]]; then
+	echo -e "\e[00;31mERROR: Faltan parametros.\e[00m"
+	exit 1
+else
+	tr -cd '[:alnum:]' < /dev/urandom | fold -w"$1" | head -n1
+fi
 
-	3)
-		openssl rand -base64 32 | tr -dc _A-Z-a-z-0-9 | cut -c 1-"$2"
-		;;
-
-	4)
-		tr -cd '[:alnum:]' < /dev/urandom | fold -w"$2" | head -n1
-		;;
-
-	5)
-		strings /dev/urandom | grep -o '[[:alnum:]]' | head -n "$2" | tr -d '\n';echo
-		;;
-
-	6)
-		dd if=/dev/urandom bs=1 count=64 2>/dev/null | base64 -w 0 | tr -dc _A-Z-a-z-0-9 | cut -c 1-"$2"
-		;;
-
-	*)
-		echo "Seleccione el metodo para generar la clave"
-		echo "uso: $(basename $0) {1|2|3|4|5|6} longitud"
-		;;
-
-esac
 exit 0
