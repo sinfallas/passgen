@@ -4,7 +4,11 @@
 LC_ALL=C
 case "$1" in
 	1)
-		date +%s | sha256sum | base64 | head -c "$2";echo
+		if [[ -z $2 ]]; then
+			date +%s | sha256sum | base64 | head -c 8;echo
+		else
+			date +%s | sha256sum | base64 | head -c "$2";echo
+		fi
 		;;
 
 	2)

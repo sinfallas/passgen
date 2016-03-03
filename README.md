@@ -8,10 +8,10 @@ Password generator script
 
 uso:
 ```bash
-passgen-all {1|2|3|4|5|6} longitude (1-32) 
+passgen-all {1|2|3|4|5|6} 1-128
 ```
 
 example:
 ```bash
-passgen-all 1 32
+passgen-all 1 64
 ```
