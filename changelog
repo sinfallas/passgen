@@ -1,4 +1,16 @@
-commit 3c3425d07a70922d3f2f917fdf82a7f8950bf87a (HEAD, origin/master, origin/HEAD, master)
+commit 4eb053d6e3a61672f80a3aad993eb31373ce8bb8 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Mar 2 21:12:28 2016 -0430
+
+    * en lugar de un mensaje de error se coloca un comportamiento por defecto para generar clave de 8 caracteres
+
+commit 1daad62b907dc1e4a6e0cf36de4a03dcc5787e4f
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Mar 2 21:06:11 2016 -0430
+
+    * changelog
+
+commit 3c3425d07a70922d3f2f917fdf82a7f8950bf87a
 Author: jose perez <sinfallas@gmail.com>
 Date:   Wed Mar 2 21:05:41 2016 -0430
 
