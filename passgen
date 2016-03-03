@@ -4,8 +4,7 @@
 LC_ALL=C
 
 if [[ -z $1 ]]; then
-	echo -e "\e[00;1;92mError: Debe indicar la longitud de la clave a generar\e[00m"
-	exit 1
+	< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c 8;echo;
 else
 	< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c "$1";echo;
 fi
