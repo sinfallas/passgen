@@ -12,7 +12,11 @@ case "$1" in
 		;;
 
 	2)
-		< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c "$2";echo;	
+		if [[ -z $2 ]]; then
+			< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c 8;echo;
+		else
+			< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c "$2";echo;
+		fi
 		;;
 
 	3)
