@@ -24,7 +24,7 @@ case "$1" in
 			openssl rand -base64 32 | tr -dc _A-Z-a-z-0-9 | cut -c 1-8
 		else
 			openssl rand -base64 32 | tr -dc _A-Z-a-z-0-9 | cut -c 1-"$2"
-		fi		
+		fi
 		;;
 
 	4)
@@ -32,11 +32,15 @@ case "$1" in
 			tr -cd '[:alnum:]' < /dev/urandom | fold -w8 | head -n1
 		else
 			tr -cd '[:alnum:]' < /dev/urandom | fold -w"$2" | head -n1
-		fi		
+		fi
 		;;
 
 	5)
-		strings /dev/urandom | grep -o '[[:alnum:]]' | head -n "$2" | tr -d '\n';echo
+		if [[ -z $2 ]]; then
+			strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 8 | tr -d '\n';echo
+		else
+			strings /dev/urandom | grep -o '[[:alnum:]]' | head -n "$2" | tr -d '\n';echo
+		fi
 		;;
 
 	6)
