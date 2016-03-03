@@ -44,7 +44,11 @@ case "$1" in
 		;;
 
 	6)
-		dd if=/dev/urandom bs=1 count=64 2>/dev/null | base64 -w 0 | tr -dc _A-Z-a-z-0-9 | cut -c 1-"$2"
+		if [[ -z $2 ]]; then
+			dd if=/dev/urandom bs=1 count=64 2>/dev/null | base64 -w 0 | tr -dc _A-Z-a-z-0-9 | cut -c 1-8
+		else
+			dd if=/dev/urandom bs=1 count=64 2>/dev/null | base64 -w 0 | tr -dc _A-Z-a-z-0-9 | cut -c 1-"$2"
+		fi
 		;;
 
 	*)
