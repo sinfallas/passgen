@@ -28,7 +28,11 @@ case "$1" in
 		;;
 
 	4)
-		tr -cd '[:alnum:]' < /dev/urandom | fold -w"$2" | head -n1
+		if [[ -z $2 ]]; then
+			tr -cd '[:alnum:]' < /dev/urandom | fold -w8 | head -n1
+		else
+			tr -cd '[:alnum:]' < /dev/urandom | fold -w"$2" | head -n1
+		fi		
 		;;
 
 	5)
