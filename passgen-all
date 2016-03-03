@@ -20,7 +20,11 @@ case "$1" in
 		;;
 
 	3)
-		openssl rand -base64 32 | tr -dc _A-Z-a-z-0-9 | cut -c 1-"$2"
+		if [[ -z $2 ]]; then
+			openssl rand -base64 32 | tr -dc _A-Z-a-z-0-9 | cut -c 1-8
+		else
+			openssl rand -base64 32 | tr -dc _A-Z-a-z-0-9 | cut -c 1-"$2"
+		fi		
 		;;
 
 	4)
