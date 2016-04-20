@@ -7,11 +7,19 @@
 Password generator script
 
 uso:
+
 ```bash
 passgen-all {1|2|3|4|5|6} 1-128
 ```
 
-example:
+ejemplo:
+
 ```bash
 passgen-all 1 64
+```
+
+ejemplo:
+
+```bash
+passgen 128
 ```
