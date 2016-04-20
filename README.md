@@ -4,7 +4,7 @@
 [![DOI](https://zenodo.org/badge/4102/xanadu-linux/passgen.svg)](https://zenodo.org/badge/latestdoi/4102/xanadu-linux/passgen)
 [![Build Status](https://travis-ci.org/xanadu-linux/passgen.svg?branch=master)](https://travis-ci.org/xanadu-linux/passgen)
 
-Password generator script
+Script para generar claves
 
 uso:
 
