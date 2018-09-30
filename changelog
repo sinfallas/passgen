@@ -1,4 +1,22 @@
-commit 04bd7ac4ad0adc37adc417e05980d75cbf715ef4 (HEAD, origin/master, origin/HEAD, master)
+commit aaf0498b8277908873f39a60b0494d54b4b6692e (HEAD -> master, origin/master, origin/HEAD)
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Wed Apr 11 08:22:04 2018 -0400
+
+    * se elimina el pid para evitar tener root
+
+commit 116891745e1c36d3e9e865cc43a9c67ebe1e0402
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Wed Apr 11 08:21:19 2018 -0400
+
+    * se elimina el pid para que no sea necesario tener privilegios de root
+
+commit 8a22bc02bd6e67f46ef08a93dfa3d82950b6ac84
+Author: jose perez <sinfallas@gmail.com>
+Date:   Wed Jul 12 15:54:55 2017 -0400
+
+    * changelog
+
+commit 04bd7ac4ad0adc37adc417e05980d75cbf715ef4
 Author: jose perez <sinfallas@gmail.com>
 Date:   Wed Jul 12 15:54:38 2017 -0400
 
