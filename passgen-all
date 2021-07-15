@@ -2,7 +2,6 @@
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
 LC_ALL=C
-trap "rm -f /run/$(basename $0).pid; exit" 0 1 2 3 9 15
 
 case "$1" in
 	1)
@@ -15,25 +14,25 @@ case "$1" in
 
 	2)
 		if [[ -z $2 ]]; then
-			< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c 8;echo;
-		else
-			< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c "$2";echo;
-		fi
-		;;
-
-	3)
-		if [[ -z $2 ]]; then
 			openssl rand -base64 32 | tr -dc _A-Z-a-z-0-9 | cut -c 1-8
 		else
 			openssl rand -base64 32 | tr -dc _A-Z-a-z-0-9 | cut -c 1-"$2"
 		fi
 		;;
 
+	3)
+		if [[ -z $2 ]]; then
+			< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c 8;echo;
+		else
+			< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c "$2";echo;
+		fi
+		;;
+
 	4)
 		if [[ -z $2 ]]; then
-			tr -cd '[:alnum:]' < /dev/urandom | fold -w8 | head -n1
+			dd if=/dev/urandom bs=1 count=64 2>/dev/null | base64 -w 0 | tr -dc _A-Z-a-z-0-9 | cut -c 1-8
 		else
-			tr -cd '[:alnum:]' < /dev/urandom | fold -w"$2" | head -n1
+			dd if=/dev/urandom bs=1 count=64 2>/dev/null | base64 -w 0 | tr -dc _A-Z-a-z-0-9 | cut -c 1-"$2"
 		fi
 		;;
 
@@ -46,10 +45,11 @@ case "$1" in
 		;;
 
 	6)
+		#Password Special Characters OWASP
 		if [[ -z $2 ]]; then
-			dd if=/dev/urandom bs=1 count=64 2>/dev/null | base64 -w 0 | tr -dc _A-Z-a-z-0-9 | cut -c 1-8
+			tr -cd 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' < /dev/urandom | fold -w8 | head -n1
 		else
-			dd if=/dev/urandom bs=1 count=64 2>/dev/null | base64 -w 0 | tr -dc _A-Z-a-z-0-9 | cut -c 1-"$2"
+			tr -cd 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' < /dev/urandom | fold -w"$2" | head -n1
 		fi
 		;;
 
